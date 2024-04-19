@@ -1,0 +1,22 @@
+@startuml
+
+title: "fluxo de autenticação"
+footer: "https://www.plantuml.com/plantuml/uml/SoWkIImgAStDuNBCoKnELT2rKt3AJx9IS2mjoKZDAybCJYp9pCzJ24ejB4qjBk42oYde0jM05MDHLLoGdrUSoeLkM5u"
+
+actor "Usuario" as usuario
+control "Web" as frontend
+control "JAVA" as backend
+database "Database" as db
+
+alt Usuario autenticado
+
+usuario -> frontend: informar dados de acesso
+frontend -> backend: efetuar login
+backend -> db: consultar dados do usuario 
+return dados
+frontend <- backend: dados de autenticação
+
+else Erro de autenticacao
+frontend <-- backend: usuario ou senha invalido
+end
+@enduml
