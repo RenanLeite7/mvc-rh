@@ -17,10 +17,8 @@
     <div class="container">
         <h3>Cadastro de Funcionarios</h3>
 
-
-        <form th:action="@{/funcionarios/save}" th:object="${funcionario}" method="post"> 
-
-                <div class="input-group mb-3">
+        <form th:action="@{/funcionarios/save}" th:object="${funcionario}" method="post">
+            <div class="input-group mb-3">
 
                 <div class="input-group-prepend">
                     <div class="input-group-text">Id</div>
@@ -32,14 +30,10 @@
                 <div class="input-group-prepend">
                     <div class="input-group-text">Nome</div>
                 </div>
-                <input type="text" class="form-control" id="nome" th:field="*{nome}">
+                <input type="text" class="form-control" id="nome"  th:field="*{nome}">
             </div>
 
-
-
-
-                <!-- 
-
+<!-- 
             <div class="input-group mb-3">
                 <div class="input-group-prepend">
                     <div class="input-group-text">Data de Entrada</div>
@@ -115,13 +109,9 @@
                 <option value="SP">São Paulo</option>
                 <option value="RJ">Rio de Janeiro</option>                
             </select>            
-
--->
-
-
-
+ -->
             <button type="submit" class="btn btn-primary btn-sm">Confirmar</button>
-            <button  class="btn btn-sm">Cancelar</button>
+            <a th:href="@{/funcionarios}" class="btn btn-secondary btn-sm">Cancelar</a>
         </form>
         
     </div>

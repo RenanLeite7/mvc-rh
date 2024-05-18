@@ -1,11 +1,11 @@
 package com.github.acnaweb.mvc_rh.repository;
 
+import com.github.acnaweb.mvc_rh.model.Cargo;
+import com.github.acnaweb.mvc_rh.model.Departamento;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.stereotype.Repository;
 
-import com.github.acnaweb.mvc_rh.model.Funcionario;
-
 @Repository
-public interface FuncionarioRepository extends JpaRepository<Funcionario, Long> {
+public interface CargoRepository extends JpaRepository<Cargo, Long> {
 
 }
